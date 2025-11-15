@@ -49,7 +49,7 @@ Content-Type: application/json
 Authorization: Bearer {{apiKey}}
 
 {
-  "emails": ["test@mail.shipany.ai"],
-  "subject": "Hello from ShipAny, with Resend",
-  "content": "<p style='color: red;'>Hello from <a href='https://shipany.ai'>Shipany</a></p>"
+  "emails": ["test@mail.your-domain.com"],
+  "subject": "Hello from YourProductName, with Resend",
+  "content": "<p style='color: red;'>Hello from <a href='https://your-domain.com'>YourProductName</a></p>"
 }

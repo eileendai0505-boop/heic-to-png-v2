@@ -469,25 +469,25 @@
         {
           "title": "X",
           "icon": "RiTwitterXFill",
-          "url": "https://x.com/shipanyai",
+          "url": "https://x.com/your-app-name",
           "target": "_blank"
         },
         {
           "title": "Github",
           "icon": "RiGithubFill",
-          "url": "https://github.com/shipanyai",
+          "url": "https://github.com/your-app-name",
           "target": "_blank"
         },
         {
           "title": "Discord",
           "icon": "RiDiscordFill",
-          "url": "https://discord.gg/HQNnrzjZQS",
+          "url": "https://discord.gg/your-app-name",
           "target": "_blank"
         },
         {
           "title": "邮箱",
           "icon": "RiMailLine",
-          "url": "mailto:support@shipany.codes",
+          "url": "mailto:support@your-domain.com",
           "target": "_self"
         }
       ]
