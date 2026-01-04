@@ -1,7 +1,21 @@
-<?xml version='1.0' encoding='utf-8' standalone='yes'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://your-domain.com/</loc>
-    <lastmod>2024-12-24T10:00:00+00:00</lastmod>
+    <loc>https://heictopng.org/</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://heictopng.org/privacy-policy</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://heictopng.org/terms-of-service</loc>
+    <lastmod>2025-01-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>

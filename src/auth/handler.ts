@@ -25,7 +25,7 @@ export async function handleSignInUser(
       avatar_url: user.image || "",
       signin_type: account.type,
       signin_provider: account.provider,
-      signin_openid: account.providerAccountId,
+      signin_openid: account.providerAccountId || user.id,
       created_at: new Date(),
       signin_ip: await getClientIp(),
     };

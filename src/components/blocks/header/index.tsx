@@ -46,6 +46,7 @@ export default function Header({ header }: { header: HeaderType }) {
             <Link
               href={(header.brand?.url as any) || "/"}
               className="flex items-center gap-2"
+              title="Home"
             >
               {header.brand?.logo?.src && (
                 <img
@@ -127,6 +128,7 @@ export default function Header({ header }: { header: HeaderType }) {
                           )}
                           href={item.url as any}
                           target={item.target}
+                          title={item.title}
                         >
                           {item.icon && (
                             <Icon
@@ -172,6 +174,7 @@ export default function Header({ header }: { header: HeaderType }) {
             <Link
               href={(header.brand?.url || "/") as any}
               className="flex items-center gap-2"
+              title="Home"
             >
               {header.brand?.logo?.src && (
                 <img
@@ -263,6 +266,7 @@ export default function Header({ header }: { header: HeaderType }) {
                           href={item.url as any}
                           target={item.target}
                           className="font-semibold my-4 flex items-center gap-2 px-4"
+                          title={item.title}
                         >
                           {item.icon && (
                             <Icon

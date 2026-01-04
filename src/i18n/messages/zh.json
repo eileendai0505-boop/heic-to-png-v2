@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "几小时内构建任何 AI SaaS 创业项目 | ShipAny",
-    "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板，提供各种模板和组件，帮助您快速启动。",
-    "keywords": "ShipAny, AI SaaS 模板, NextJS 模板"
+    "title": "HEIC 转 PNG 转换器：免费、无限制、在线转换",
+    "description": "免费在线将 HEIC 图片转换为 PNG 格式。支持无限批量转换，无文件大小限制。安全的客户端处理。",
+    "keywords": "HEIC 转 PNG, HEIC 转换器, 免费 HEIC 转换, 批量 HEIC 转换, 在线图片转换"
   },
   "user": {
     "sign_in": "登录",
@@ -89,7 +89,7 @@
   },
   "blog": {
     "title": "博客",
-    "description": "关于 ShipAny 的新闻、资源和更新",
+    "description": "关于 HeicToPng 的新闻、资源和更新",
     "read_more_text": "阅读更多",
     "no_content": "暂无内容",
     "all": "全部",

@@ -10,7 +10,27 @@ import { getUuid } from "@/lib/hash";
 import { saveUser } from "@/services/user";
 import { handleSignInUser } from "./handler";
 
-let providers: Provider[] = [];
+let providers: Provider[] = [
+  CredentialsProvider({
+    id: "credentials",
+    name: "Credentials",
+    credentials: {
+      email: { label: "Email", type: "email" },
+      password: { label: "Password", type: "password" },
+    },
+    async authorize(credentials) {
+      if (!credentials?.email) return null;
+      // In a real app, you would verify the password here.
+      // For this template to work "out of the box" with just email as ID for dev/testing:
+      return {
+        id: "user-" + credentials.email,
+        email: credentials.email as string,
+        name: (credentials.email as string).split("@")[0],
+        image: "/logo.png",
+      };
+    },
+  }),
+];
 
 // Google One Tap Auth
 if (
@@ -167,7 +187,7 @@ export const authOptions: NextAuthConfig = {
 
         return token;
       } catch (e) {
-        console.error("jwt callback error:", e);
+        console.error("JWT Callback Error (Login Failed):", e);
         return token;
       }
     },

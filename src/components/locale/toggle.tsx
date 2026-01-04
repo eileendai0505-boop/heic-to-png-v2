@@ -27,6 +27,10 @@ export default function ({ isIcon = false }: { isIcon?: boolean }) {
     }
   };
 
+  if (Object.keys(localeNames).length <= 1) {
+    return null;
+  }
+
   return (
     <Select value={locale} onValueChange={handleSwitchLanguage}>
       <SelectTrigger className="flex items-center gap-2 border-none text-muted-foreground outline-hidden hover:bg-transparent focus:ring-0 focus:ring-offset-0">

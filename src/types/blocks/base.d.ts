@@ -91,6 +91,7 @@ export interface Social {
 
 export interface AgreementItem {
   title?: string;
+  icon?: string;
   url?: string;
   target?: string;
 }

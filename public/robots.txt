@@ -1,4 +1,25 @@
 User-agent: *
-Disallow: /*?*q=
-Disallow: /privacy-policy
-Disallow: /terms-of-service
+Allow: /
+
+# Private User Pages
+Disallow: /my-orders
+Disallow: /my-credits
+Disallow: /my-invites
+Disallow: /api-keys
+Disallow: /auth/
+Disallow: /user/
+
+# Admin Interface
+Disallow: /admin/
+
+# API Endpoints
+Disallow: /api/
+
+# System Directories
+Disallow: /_next/
+Disallow: /_vercel/
+
+# Prevent indexing of query parameters
+Disallow: /*?*
+
+Sitemap: https://heictopng.org/sitemap.xml
