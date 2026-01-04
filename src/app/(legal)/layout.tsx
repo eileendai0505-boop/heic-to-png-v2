@@ -9,7 +9,7 @@ import Footer from "@/components/blocks/footer";
 import { Footer as FooterType } from "@/types/blocks/footer";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations();
+  const t = await getTranslations({ locale: "en" });
 
   return {
     title: {
