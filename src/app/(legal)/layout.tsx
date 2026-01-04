@@ -3,10 +3,11 @@ import "@/app/globals.css";
 import { MdOutlineHome } from "react-icons/md";
 import { Metadata } from "next";
 import React from "react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getMessages } from "next-intl/server";
 import LegalHeader from "@/components/legal-header";
 import Footer from "@/components/blocks/footer";
 import { Footer as FooterType } from "@/types/blocks/footer";
+import { NextIntlClientProvider } from "next-intl";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations({ locale: "en" });
@@ -27,11 +28,13 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function LegalLayout({
+export default async function LegalLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const messages = await getMessages({ locale: "en" });
+  
   const footer: FooterType = {
     name: "footer",
     brand: {
@@ -70,29 +73,31 @@ export default function LegalLayout({
   };
 
   return (
-    <div>
-      <LegalHeader />
-      <a
-        className="text-base-content cursor-pointer hover:opacity-80 transition-opacity"
-        href="/"
-      >
-        <MdOutlineHome className="text-2xl mx-8 my-8" />
-        {/* <img className="w-10 h-10 mx-4 my-4" src="/logo.png" /> */}
-      </a>
-      <div className="text-md max-w-4xl mx-auto pt-4 pb-16 px-8 prose prose-slate dark:prose-invert
-        prose-headings:font-semibold prose-headings:mt-8 prose-headings:mb-4
-        prose-h1:text-3xl prose-h1:mt-0 prose-h1:mb-6
-        prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-5
-        prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
-        prose-p:mb-5 prose-p:leading-7
-        prose-ul:mb-6 prose-ul:mt-4
-        prose-li:mb-2
-        prose-a:text-primary hover:prose-a:text-primary/80
-        prose-strong:text-base-content
-        prose-code:text-base-content prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md">
-        {children}
+    <NextIntlClientProvider locale="en" messages={messages}>
+      <div>
+        <LegalHeader />
+        <a
+          className="text-base-content cursor-pointer hover:opacity-80 transition-opacity"
+          href="/"
+        >
+          <MdOutlineHome className="text-2xl mx-8 my-8" />
+          {/* <img className="w-10 h-10 mx-4 my-4" src="/logo.png" /> */}
+        </a>
+        <div className="text-md max-w-4xl mx-auto pt-4 pb-16 px-8 prose prose-slate dark:prose-invert
+          prose-headings:font-semibold prose-headings:mt-8 prose-headings:mb-4
+          prose-h1:text-3xl prose-h1:mt-0 prose-h1:mb-6
+          prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-5
+          prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+          prose-p:mb-5 prose-p:leading-7
+          prose-ul:mb-6 prose-ul:mt-4
+          prose-li:mb-2
+          prose-a:text-primary hover:prose-a:text-primary/80
+          prose-strong:text-base-content
+          prose-code:text-base-content prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md">
+          {children}
+        </div>
+        <Footer footer={footer} />
       </div>
-      <Footer footer={footer} />
-    </div>
+    </NextIntlClientProvider>
   );
 }
