@@ -3,7 +3,7 @@ import "@/app/globals.css";
 import { MdOutlineHome } from "react-icons/md";
 import { Metadata } from "next";
 import React from "react";
-import { getTranslations, getMessages } from "next-intl/server";
+import { getTranslations, getMessages, setRequestLocale } from "next-intl/server";
 import LegalHeader from "@/components/legal-header";
 import Footer from "@/components/blocks/footer";
 import { Footer as FooterType } from "@/types/blocks/footer";
@@ -33,6 +33,7 @@ export default async function LegalLayout({
 }: {
   children: React.ReactNode;
 }) {
+  setRequestLocale("en");
   const messages = await getMessages({ locale: "en" });
   
   const footer: FooterType = {
