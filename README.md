@@ -1,87 +1,53 @@
-# ShipAny Template One
+# Heic to Png v2
 
-Ship Any AI SaaS Startups in hours.
+A fast and secure web application for converting HEIC images to PNG format.
 
-![preview](preview.png)
+## Features
 
-## Quick Start
+- **Fast Conversion**: Efficiently converts HEIC files to PNG.
+- **Client-Side Processing**: Files are processed locally in your browser for maximum privacy.
+- **Batch Processing**: Support for converting multiple files.
+- **Sleek UI**: Modern and responsive design.
 
-1. Clone the repository
+## Tech Stack
 
-```bash
-git clone https://github.com/shipanyai/shipany-template-one.git
-```
+- **Framework**: [Next.js](https://nextjs.org)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com)
+- **Language**: [TypeScript](https://www.typescriptlang.org)
 
-2. Install dependencies
+## Getting Started
 
-```bash
-pnpm install
-```
+To run the project locally, follow these steps:
 
-3. Run the development server
+1.  **Clone the repository**
 
-```bash
-pnpm dev
-```
+    ```bash
+    git clone https://github.com/eileendai0505-boop/heic-to-png-v2.git
+    cd heic-to-png-v2
+    ```
 
-## Customize
+2.  **Install dependencies**
 
-- Set your environment variables
+    ```bash
+    pnpm install
+    ```
 
-```bash
-cp .env.example .env.development
-```
+3.  **Run the development server**
 
-- Set your theme in `src/app/theme.css`
+    ```bash
+    pnpm dev
+    ```
 
-[tweakcn](https://tweakcn.com/editor/theme)
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- Set your landing page content in `src/i18n/pages/landing`
+## Building for Production
 
-- Set your i18n messages in `src/i18n/messages`
-
-## Deploy
-
-- Deploy to Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fshipanyai%2Fshipany-template-one&project-name=my-shipany-project&repository-name=my-shipany-project&redirect-url=https%3A%2F%2Fshipany.ai&demo-title=ShipAny&demo-description=Ship%20Any%20AI%20Startup%20in%20hours%2C%20not%20days&demo-url=https%3A%2F%2Fshipany.ai&demo-image=https%3A%2F%2Fpbs.twimg.com%2Fmedia%2FGgGSW3La8AAGJgU%3Fformat%3Djpg%26name%3Dlarge)
-
-- Deploy to Cloudflare
-
-for new project, clone with branch "cloudflare"
-
-```shell
-git clone -b cloudflare https://github.com/shipanyai/shipany-template-one.git
-```
-
-for exist project, checkout to branch "cloudflare"
-
-```shell
-git checkout cloudflare
-```
-
-1. Customize your environment variables
+To create a production build:
 
 ```bash
-cp .env.example .env.production
-cp wrangler.toml.example wrangler.toml
+pnpm build
 ```
-
-edit your environment variables in `.env.production`
-
-and put all the environment variables under `[vars]` in `wrangler.toml`
-
-2. Deploy
-
-```bash
-npm run cf:deploy
-```
-
-## Community
-
-- [ShipAny](https://shipany.ai)
-- [Documentation](https://docs.shipany.ai)
 
 ## License
 
-- [ShipAny AI SaaS Boilerplate License Agreement](LICENSE)
+This project is open source.
