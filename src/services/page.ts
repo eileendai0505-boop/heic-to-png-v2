@@ -17,9 +17,7 @@ export async function getPage(
   locale: string
 ): Promise<LandingPage | PricingPage | ShowcasePage> {
   try {
-    if (locale === "zh-CN") {
-      locale = "zh";
-    }
+
 
     return await import(
       `@/i18n/pages/${name}/${locale.toLowerCase()}.json`
